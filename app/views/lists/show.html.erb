@@ -10,7 +10,7 @@
     <div>
         <h1>Movie Title</h1>
       <h2><%= movie.title %></h2>
-      
+
       <p>Overview:<%= movie.overview %></p>
     </div>
     <h2 class="card-trip-pricing">Rating:<%= movie.rating %></h2>
@@ -32,5 +32,10 @@
     <% end %>
 </div>
 
+<div class="card-category"
+  style="background-image:
+  linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @list.photo.key, height: 300, crop: :fill %>')">
+  Cool article
+</div>
 <%= link_to "go back to all list", lists_path %>
 <%= link_to "Create new bookmark", new_list_bookmark_path(@list)  %>
