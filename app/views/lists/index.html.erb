@@ -1,0 +1,36 @@
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+url(<%= asset_path('photo1.jpg') %>);">
+  <div class="container">
+    <h1>The cinema brings <strong>realx </strong> And <strong>dream</strong>!</h1>
+    <p>Change your life and watch to film at one of our app if you are in earth.</p>
+    <a class="btn btn-flat" href="#">watch now</a>
+  </div>
+</div>
+
+
+
+
+<h1>All of the movies</h1>
+
+
+
+
+<div class="container">
+  <ul>
+    <% @lists.each do |list| %>
+        <%= link_to list_path(list) do %>
+          <li><%= list.name %></li>
+        <% end %>
+    <% end %>
+  </ul>
+</div>
+
+<div class="container">
+
+
+
+<%= link_to "Create new list",new_list_path(@list), class: "btn btn-flat" %>
+
+
+</div>
